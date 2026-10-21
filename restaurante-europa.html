@@ -81,6 +81,39 @@
 .case-posters figcaption{font-size:8px}
 .case-colors{gap:7px}
 }
+
+/* Fire-led cinematic crop: remove the empty, blurred upper half */
+.case-cover{height:clamp(330px,52vw,680px);overflow:hidden}
+.case-cover img{width:100%;height:100%;object-fit:cover;object-position:center 78%}
+.case-story{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0;align-items:start;margin-bottom:80px}
+.case-story figure{grid-row:auto!important;min-width:0}
+.case-story figure:nth-child(1){grid-column:1/span 6;grid-row:1!important;margin:0}
+.case-story figure:nth-child(2){grid-column:9/span 4;grid-row:1!important;margin:clamp(90px,14vw,210px) 0 0}
+.case-story figure:nth-child(3){grid-column:2/span 5;grid-row:2!important;margin:45px 0 0}
+.case-story figure:nth-child(4){grid-column:8/span 5;grid-row:2!important;margin:clamp(100px,16vw,230px) 0 0}
+.case-story figure:nth-child(5){grid-column:7/span 5;grid-row:3!important;margin:35px 0 0}
+.case-story figure:nth-child(6){grid-column:1/span 5;grid-row:3!important;margin:clamp(140px,22vw,300px) 0 0}
+.case-story figure:nth-child(7){grid-column:7/span 6;grid-row:4!important;margin:80px 0 0}
+.case-story figure:nth-child(8){grid-column:1/span 5;grid-row:4!important;margin:clamp(150px,24vw,330px) 0 0}
+.case-story figure:nth-child(9){grid-column:3/span 6;grid-row:5!important;margin:65px 0 0}
+.case-story img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.case-story figure:nth-child(3) img,.case-story figure:nth-child(5) img,.case-story figure:nth-child(8) img{display:block;max-height:570px;object-fit:cover;aspect-ratio:4/5}
+.case-story figcaption{font-size:10px;letter-spacing:.12em;margin-top:10px}
+@media(max-width:700px){
+.case-cover{height:clamp(260px,68vw,450px)}
+.case-cover img{height:100%;object-fit:cover;object-position:center 78%}
+.case-story{grid-template-columns:repeat(6,minmax(0,1fr));margin-bottom:60px}
+.case-story figure:nth-child(1){grid-column:1/span 5;grid-row:1!important;margin:0}
+.case-story figure:nth-child(2){grid-column:3/span 4;grid-row:2!important;margin:40px 0 0}
+.case-story figure:nth-child(3){grid-column:1/span 5;grid-row:3!important;margin:45px 0 0}
+.case-story figure:nth-child(4){grid-column:2/span 5;grid-row:4!important;margin:40px 0 0}
+.case-story figure:nth-child(5){grid-column:1/span 4;grid-row:5!important;margin:45px 0 0}
+.case-story figure:nth-child(6){grid-column:3/span 4;grid-row:6!important;margin:40px 0 0}
+.case-story figure:nth-child(7){grid-column:1/span 5;grid-row:7!important;margin:45px 0 0}
+.case-story figure:nth-child(8){grid-column:2/span 5;grid-row:8!important;margin:40px 0 0}
+.case-story figure:nth-child(9){grid-column:1/span 5;grid-row:9!important;margin:45px 0 0}
+.case-story figcaption{font-size:8px}
+}
 </style>
 </head>
 <body>
@@ -91,15 +124,18 @@
 <div class="case-cover"><img src="images/europa-brasa.jpeg" alt="Fuego y brasas de la cocina del Restaurante Europa" loading="eager"></div>
 <section class="case-section"><div><p class="eyebrow">01 — EL PROYECTO</p><h2>Tradición,<br>otra mirada.</h2></div><div class="copy"><p>Restaurante Europa es un negocio familiar situado en Fredes, con más de 50 años de historia. El proyecto traslada su carácter a una presencia digital contemporánea sin perder la cercanía, la cocina tradicional y el vínculo con el entorno.</p></div></section>
 <div class="case-photo-pair"><figure><img src="images/europa-parrilla.jpeg" alt="Carne cocinándose a la brasa" loading="lazy"><figcaption>EL FUEGO / EL OFICIO</figcaption></figure><figure><img src="images/europa-interior.jpeg" alt="Interior del restaurante" loading="lazy"><figcaption>EL ESPACIO / LA HISTORIA</figcaption></figure></div><section class="case-section"><div><p class="eyebrow">02 — LENGUAJE VISUAL</p><h2>Una identidad<br>con raíces.</h2></div><div><p class="copy">Un sistema visual editorial que combina tipografía, fotografía natural y detalles cotidianos del restaurante. Su paleta pertenece a la identidad de Europa, no a la del portfolio.</p><div class="case-colors"><div class="case-swatch">NEGRO</div><div class="case-swatch">CREMA CÁLIDO</div><div class="case-swatch">MARRÓN MADERA</div></div></div></section>
-<section class="case-art"><p class="eyebrow">03 — DIRECCIÓN DE ARTE</p><h2>Palabras de casa.</h2><div class="case-posters">
+<section class="case-art"><p class="eyebrow">03 — DIRECCIÓN DE ARTE</p><h2>Palabras de casa.</h2><div class="case-posters case-story">
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_37.png" alt="Diseño original Receptes de sempre, fondo crema" loading="lazy"><figcaption>01 / RECEPTES DE SEMPRE</figcaption></figure>
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_29.png" alt="Diseño original A taula, fondo negro" loading="lazy"><figcaption>02 / A TAULA!</figcaption></figure>
+<figure><img src="images/europa-cuajada.jpeg" alt="Cuajada en recipiente de barro" loading="lazy"><figcaption>DETALLES DE CASA</figcaption></figure>
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_18.png" alt="Diseño original Com a casa, fondo marrón" loading="lazy"><figcaption>03 / COM A CASA</figcaption></figure>
+<figure><img src="images/europa-pan.jpeg" alt="Pan cortado en cesta de madera" loading="lazy"><figcaption>LO COTIDIANO</figcaption></figure>
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_52.png" alt="Diseño original Foc i brasa, fondo marrón" loading="lazy"><figcaption>04 / FOC I BRASA</figcaption></figure>
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_44.png" alt="Diseño original Més de 50 anys de tradició, fondo crema" loading="lazy"><figcaption>05 / MÉS DE 50 ANYS</figcaption></figure>
+<figure><img src="images/europa-historia.jpeg" alt="Fotografía histórica del restaurante" loading="lazy"><figcaption>MEMORIA DEL LUGAR</figcaption></figure>
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_58.png" alt="Diseño original Cuina de muntanya, fondo negro" loading="lazy"><figcaption>06 / CUINA DE MUNTANYA</figcaption></figure>
 </div></section>
-<div class="case-photo-pair case-photo-trio"><figure><img src="images/europa-cuajada.jpeg" alt="Cuajada en recipiente de barro" loading="lazy"><figcaption>DETALLES DE CASA</figcaption></figure><figure><img src="images/europa-pan.jpeg" alt="Pan cortado en cesta de madera" loading="lazy"><figcaption>LO COTIDIANO</figcaption></figure><figure><img src="images/europa-historia.jpeg" alt="Fotografía histórica del restaurante" loading="lazy"><figcaption>MEMORIA DEL LUGAR</figcaption></figure></div><section class="case-section"><div><p class="eyebrow">04 — PRESENCIA DIGITAL</p><h2>Más allá<br>de la mesa.</h2></div><div class="copy"><p>La dirección visual se aplica a las redes sociales, la página web y la comunicación digital, creando una presencia reconocible y coherente en distintos formatos.</p><p style="margin-top:25px;font-size:12px;letter-spacing:.1em">WEB / REDES SOCIALES / CONTENIDO VISUAL</p></div></section>
+<section class="case-section"><div><p class="eyebrow">04 — PRESENCIA DIGITAL</p><h2>Más allá<br>de la mesa.</h2></div><div class="copy"><p>La dirección visual se aplica a las redes sociales, la página web y la comunicación digital, creando una presencia reconocible y coherente en distintos formatos.</p><p style="margin-top:25px;font-size:12px;letter-spacing:.1em">WEB / REDES SOCIALES / CONTENIDO VISUAL</p></div></section>
 <div class="case-web-preview"><div class="case-browser"><div class="case-browser-bar"><span class="case-browser-dots"><i></i><i></i><i></i></span><span>restauranteuropafredes.es</span></div><div class="case-browser-screen"><span>RESTAURANTE EUROPA · FREDES</span><strong>Una historia<br>que sigue viva.</strong><a href="https://restauranteuropafredes.es/" target="_blank" rel="noopener noreferrer">VISITAR WEB ↗</a></div></div><div class="case-web-caption"><span>DISEÑO WEB / EXPERIENCIA DIGITAL</span><span>VISTA CONCEPTUAL — ENLACE A LA WEB REAL</span></div></div><div class="case-outro"><p>Más de 50 años de historia.<br>Una nueva forma de contarla.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
 </main>
 <script>
