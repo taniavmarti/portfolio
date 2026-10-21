@@ -29,7 +29,8 @@
 .case-outro p{font:italic clamp(35px,5vw,75px) Georgia,serif}
 .case-outro a{font-size:12px;border-bottom:1px solid;padding-bottom:5px}
 @media(max-width:700px){.case{padding:24px 20px 65px}.case-hero{padding:70px 0 35px}.case-hero h1{font-size:clamp(56px,14vw,100px)}.case-cover{height:48vh}.case-section{grid-template-columns:1fr;gap:28px;padding:75px 0}.case-colors{gap:5px}.case-swatch{height:105px;padding:8px;font-size:9px}.case-posters{gap:6px}.case-poster{padding:9px}.case-poster small{font-size:7px}.case-poster strong{font-size:clamp(17px,4vw,32px)}.case-art{padding:75px 0 20px}.case-outro{padding-top:70px;display:block}.case-outro a{display:inline-block;margin-top:25px}}
-.case-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:60px 0 30px}.case-photo-pair figure{min-width:0}.case-photo-pair img{display:block;width:100%;height:clamp(300px,55vw,680px);object-fit:cover;background:#c7c9c7}.case-photo-pair figcaption{font-size:10px;letter-spacing:.12em;margin-top:12px}.case-photo-trio{grid-template-columns:repeat(3,1fr)}.case-photo-trio img{height:clamp(230px,38vw,500px)}@media(max-width:700px){.case-photo-pair{gap:8px;margin:35px 0}.case-photo-pair img{height:260px}.case-photo-trio{grid-template-columns:1fr 1fr}.case-photo-trio figure:last-child{grid-column:1/-1}.case-photo-trio figure:last-child img{height:340px}.case-photo-pair figcaption{font-size:8px}}</style>
+.case-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:60px 0 30px}.case-photo-pair figure{min-width:0}.case-photo-pair img{display:block;width:100%;height:clamp(300px,55vw,680px);object-fit:cover;background:#c7c9c7}.case-photo-pair figcaption{font-size:10px;letter-spacing:.12em;margin-top:12px}.case-photo-trio{grid-template-columns:repeat(3,1fr)}.case-photo-trio img{height:clamp(230px,38vw,500px)}@media(max-width:700px){.case-photo-pair{gap:8px;margin:35px 0}.case-photo-pair img{height:260px}.case-photo-trio{grid-template-columns:1fr 1fr}.case-photo-trio figure:last-child{grid-column:1/-1}.case-photo-trio figure:last-child img{height:340px}.case-photo-pair figcaption{font-size:8px}}@media(prefers-reduced-motion:no-preference){.reveal-ready .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.reveal-ready .reveal.is-visible{opacity:1;transform:none}.reveal-ready .reveal:nth-child(2){transition-delay:.08s}.reveal-ready .reveal:nth-child(3){transition-delay:.16s}.reveal-ready .reveal:nth-child(4){transition-delay:.24s}.reveal-ready .reveal:nth-child(5){transition-delay:.32s}.reveal-ready .reveal:nth-child(6){transition-delay:.4s}}
+</style>
 </head>
 <body>
 <header class="site-header"><a class="logo" href="index.html#home">T. VIDAL</a><nav aria-label="Main navigation"><a href="index.html#home">[01] INICIO</a><a href="index.html#work">[02] PROYECTOS</a><a href="index.html#about">[03] SOBRE MÍ</a><a href="index.html#contact">[04] CONTACTO</a></nav></header>
@@ -43,5 +44,21 @@
 <div class="case-photo-pair case-photo-trio"><figure><img src="images/europa-cuajada.jpeg" alt="Cuajada en recipiente de barro" loading="lazy"><figcaption>DETALLES DE CASA</figcaption></figure><figure><img src="images/europa-pan.jpeg" alt="Pan cortado en cesta de madera" loading="lazy"><figcaption>LO COTIDIANO</figcaption></figure><figure><img src="images/europa-historia.jpeg" alt="Fotografía histórica del restaurante" loading="lazy"><figcaption>MEMORIA DEL LUGAR</figcaption></figure></div><section class="case-section"><div><p class="eyebrow">04 — PRESENCIA DIGITAL</p><h2>Más allá<br>de la mesa.</h2></div><div class="copy"><p>La dirección visual se aplica a las redes sociales, la página web y la comunicación digital, creando una presencia reconocible y coherente en distintos formatos.</p><p style="margin-top:25px;font-size:12px;letter-spacing:.1em">WEB / REDES SOCIALES / CONTENIDO VISUAL</p></div></section>
 <div class="case-outro"><p>Más de 50 años de historia.<br>Una nueva forma de contarla.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
 </main>
+<script>
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const targets = document.querySelectorAll('.case-hero, .case-cover, .case-section > div, .case-photo-pair figure, .case-art > h2, .case-art > .eyebrow, .case-posters > *, .case-outro > *');
+  targets.forEach(el => el.classList.add('reveal'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+  targets.forEach(el => observer.observe(el));
+  document.documentElement.classList.add('reveal-ready');
+}
+</script>
 </body>
 </html>
