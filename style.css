@@ -1,0 +1,62 @@
+/* TANIA VIDAL — editorial portfolio */
+:root{--ink:#0b0c0b;--cream:#d8d2c4;--placeholder:#c9c2b3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+.site-header{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:24px 32px;font-size:11px;letter-spacing:.16em}
+.site-header nav{display:flex;gap:28px}
+.hero{position:relative;min-height:calc(100svh - 63px);padding:60px 32px 45px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.role{position:relative;z-index:5;font-size:16px;line-height:1.05}
+.hero h1{position:relative;z-index:4;width:fit-content;font-size:clamp(90px,17vw,260px);line-height:.72;letter-spacing:-.08em;font-weight:800}
+.hero h1 span{display:block;transition:transform .5s ease,color .5s ease}
+.hero h1 .vidal{margin-left:7%;color:transparent;-webkit-text-stroke:2px var(--cream)}
+.hero h1:hover span:first-child{transform:translateX(2%)}
+.hero h1:hover .vidal{transform:translateX(-2%);color:var(--cream)}
+.note{position:absolute;right:8%;top:62%;z-index:5;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.35;font-style:italic;transform:rotate(-6deg)}
+.note-line{display:flex;gap:5px}
+.note-item{cursor:pointer;transition:opacity .25s ease,transform .25s ease}
+.note-item:hover{opacity:.55;transform:translateY(-2px)}
+.note-preview{position:absolute;right:18%;top:25%;z-index:3;width:260px;aspect-ratio:4/5;opacity:0;visibility:hidden;transform:translateY(14px) rotate(2deg);transition:opacity .35s ease,transform .45s ease,visibility .35s;pointer-events:none}
+.note-preview.is-visible{opacity:1;visibility:visible;transform:translateY(0) rotate(2deg)}
+.note-preview img{display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.75) saturate(.75) contrast(1.08)}
+.note-preview-label{position:absolute;left:0;bottom:-22px;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.scroll{position:relative;z-index:5;width:fit-content;font-size:16px}
+.site-header a,.scroll{transition:opacity .25s ease}
+.site-header a:hover,.scroll:hover{opacity:.55}
+.work{padding:32px 32px 150px;background:var(--cream);color:var(--ink)}
+.work-header,.section-kicker{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid rgba(11,12,11,.3);font-size:10px;letter-spacing:.16em}
+.work-intro{min-height:42vh;display:flex;justify-content:space-between;align-items:flex-end;padding:70px 0 50px}
+.work-intro p{font-family:Georgia,'Times New Roman',serif;font-size:clamp(32px,4vw,62px);line-height:1.02;font-style:italic;letter-spacing:-.04em}
+.work-intro>span{font-size:28px}
+.work-project{margin-top:140px}
+.work-project:first-of-type{margin-top:30px}
+.work-project-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:9px;letter-spacing:.14em;gap:20px}
+.work-image{position:relative;overflow:hidden}
+.europa-image{height:62vh;background:var(--placeholder)}
+.europa-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 62%;transition:transform .8s ease}
+.europa-image:hover img{transform:scale(1.025)}
+.europa-image.missing-image:after{content:'RESTAURANTE EUROPA — IMAGE TO UPLOAD';position:absolute;inset:0;display:grid;place-items:center;font-size:10px;letter-spacing:.13em;opacity:.55}
+.placeholder-image{min-height:62vh;display:flex;justify-content:center;align-items:center;background:var(--placeholder);border:1px solid rgba(11,12,11,.18);color:rgba(11,12,11,.4);font-size:9px;letter-spacing:.16em}
+.work-project-info{display:grid;grid-template-columns:1.35fr .65fr;gap:80px;padding-top:28px}
+.work-project h3{color:var(--ink);font-size:clamp(52px,7vw,110px);line-height:.84;font-weight:500;letter-spacing:-.065em}
+.project-script{margin-top:17px;font-family:Georgia,'Times New Roman',serif;font-size:16px;font-style:italic;opacity:.65}
+.project-description{display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:5px}
+.project-description p,.split-info p{max-width:380px;font-size:13px;line-height:1.55;opacity:.65}
+.project-link-pending{display:block;width:fit-content;margin-top:26px;padding-bottom:4px;border-bottom:1px solid currentColor;font-size:10px;letter-spacing:.12em;opacity:.6}
+.project-split{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:end}
+.project-split .placeholder-image{min-height:70vh}
+.split-info{padding-bottom:30px}
+.split-info h3{margin-bottom:32px}
+.project-split-reverse{grid-template-columns:.75fr 1.25fr}
+.about,.contact{padding:32px 32px 110px}
+.about{background:var(--ink);color:var(--cream)}
+.about .section-kicker,.contact .section-kicker{border-color:rgba(216,210,196,.3)}
+.about h2,.contact h2{font-size:clamp(55px,9vw,140px);line-height:.92;letter-spacing:-.07em;font-weight:500;margin:90px 0 50px}
+.about h2 em,.contact h2 em{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+.about>p,.contact>p{font-size:clamp(17px,2vw,26px);line-height:1.5;max-width:690px}
+.contact{background:var(--ink)}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:140px;padding-top:20px;border-top:1px solid rgba(216,210,196,.3);font-size:10px;letter-spacing:.12em}
+@media(max-width:900px){.site-header{padding:20px}.site-header nav{gap:14px}.hero{padding:45px 20px 30px}.hero h1{font-size:clamp(76px,22vw,180px)}.note{right:6%;top:68%;font-size:14px}.note-preview{width:210px;right:20%;top:30%}.role,.scroll{font-size:14px}.work{padding:25px 20px 100px}.work-intro{min-height:35vh}.work-project{margin-top:100px}.work-project-info{grid-template-columns:1fr .7fr;gap:40px}.project-split,.project-split-reverse{grid-template-columns:1fr .8fr;gap:35px}.europa-image{height:52vh}.about,.contact{padding:25px 20px 90px}}
+@media(max-width:700px){.site-header{padding:20px;align-items:flex-start}.site-header nav{display:none}.hero{min-height:calc(100svh - 59px);padding:45px 20px 30px}.hero h1{font-size:clamp(70px,25vw,130px);line-height:.76}.hero h1 .vidal{margin-left:4%}.note{top:auto;right:20px;bottom:110px}.note-preview{width:150px;top:auto;right:25px;bottom:180px}.scroll{font-size:12px}.work{padding:22px 20px 80px}.work-intro{min-height:32vh;padding:50px 0 35px}.work-intro p{font-size:32px}.work-project{margin-top:85px}.work-project-meta{font-size:8px}.europa-image{height:48vh}.placeholder-image{min-height:45vh}.work-project-info{display:block;padding-top:20px}.work-project h3{font-size:clamp(42px,11vw,52px)}.project-description{margin-top:35px}.project-split,.project-split-reverse{display:flex;flex-direction:column;gap:25px;align-items:stretch}.project-split-reverse .split-info{order:2}.project-split-reverse .work-image{order:1}.project-split .placeholder-image{min-height:48vh}.split-info{padding-bottom:0}.about h2,.contact h2{margin:65px 0 35px}.footer-bottom{margin-top:90px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
