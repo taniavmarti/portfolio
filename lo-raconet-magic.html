@@ -221,6 +221,18 @@ body{background:#261038;color:#f7eaff}
 .r-mobile-offset{margin-top:100px}
 .r-mobile-third{margin-top:195px}
 @media(max-width:760px){.r-mobile-intro{grid-template-columns:1fr;gap:22px}.r-mobile-gallery{grid-template-columns:1fr 1fr;gap:14px}.r-mobile-third{display:none}.r-mobile-offset{margin-top:65px}.r-mobile-shot img{border-width:5px;border-radius:13px}.r-mobile-shot figcaption{font-size:9px}}
+
+/* Definitive typography: Cabin across the entire case study, no inherited editorial serif */
+html body .raconet,html body .raconet *:not(i){font-family:"Cabin",Arial,sans-serif!important}
+html body .raconet h1,html body .raconet h2,html body .raconet h3,html body .raconet strong{font-weight:700!important;font-style:normal!important;letter-spacing:-.055em!important}
+html body .raconet em{font-family:"Cabin",Arial,sans-serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:-.065em!important}
+html body .raconet .r-hero h1{font-weight:700!important;line-height:.88!important}
+html body .raconet .r-feature-copy strong{font-size:clamp(48px,6vw,100px)!important;line-height:.95!important}
+html body .raconet .r-outro p{font-weight:600!important;font-style:normal!important}
+html body .raconet .r-mobile-shot img{width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:initial!important;border-radius:12px!important}
+html body .raconet .r-mobile-shot{align-self:start!important}
+html body .raconet .r-mobile-gallery{align-items:start!important}
+@media(max-width:760px){html body .raconet .r-mobile-shot img{height:auto!important;max-height:none!important}}
 </style>
 </head>
 <body>
