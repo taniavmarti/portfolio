@@ -187,6 +187,16 @@
 .digital-real-browser:hover{box-shadow:0 20px 50px rgba(0,0,0,.12)}
 @media(max-width:700px){.digital-social-photo{min-height:300px;aspect-ratio:4/5}.digital-social-photo>span{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.digital-social-photo>img,.digital-real-browser{transition:none}}
+
+/* Client-facing case study additions */
+.europa-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#c9c0b3;border-top:1px solid #c9c0b3;border-bottom:1px solid #c9c0b3;margin-bottom:35px}
+.europa-facts>div{background:#f6f2e9;padding:26px 20px;display:flex;flex-direction:column;gap:14px}
+.europa-facts span{font-size:10px;letter-spacing:.13em;color:#715b4c}
+.europa-facts strong{font-size:clamp(15px,1.5vw,21px);font-weight:500;line-height:1.3}
+.europa-outro-sub{display:block;font-size:17px;line-height:1.5;max-width:470px;margin-top:20px;color:#63594f}
+.europa-outro-links{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.europa-outro .europa-contact-link{display:inline-block;background:#151411;color:#eee7d9;border:0;padding:17px 22px;font-size:11px;letter-spacing:.11em;text-decoration:none}
+@media(max-width:700px){.europa-facts{grid-template-columns:1fr 1fr;margin-bottom:20px}.europa-facts>div{padding:20px 14px}.europa-outro-links{margin-top:35px}}
 </style>
 </head>
 <body>
@@ -194,8 +204,8 @@
 <main class="case">
 <div class="case-top"><span>01 / PROYECTOS</span><a href="index.html#work">← VOLVER A PROYECTOS</a></div>
 <section class="case-hero"><h1>Restaurante<br>Europa.</h1><p>IDENTIDAD VISUAL / DIRECCIÓN DE ARTE / WEB / REDES — FREDES, CASTELLÓ</p></section>
-<div class="case-cover"><img src="images/europa-brasa.jpeg" alt="Fuego y brasas de la cocina del Restaurante Europa" loading="eager"></div>
-<section class="case-section"><div><p class="eyebrow">01 — EL PROYECTO</p><h2>Tradición,<br>otra mirada.</h2></div><div class="copy"><p>Restaurante Europa es un negocio familiar situado en Fredes, con más de 50 años de historia. El proyecto traslada su carácter a una presencia digital contemporánea sin perder la cercanía, la cocina tradicional y el vínculo con el entorno.</p></div></section>
+<aside class="europa-facts" aria-label="Datos del proyecto"><div><span>PROYECTO</span><strong>Restaurante familiar · Fredes</strong></div><div><span>MI PAPEL</span><strong>Diseño web y comunicación visual</strong></div><div><span>ENTREGABLES</span><strong>Web · Contenido gráfico · Instagram</strong></div><div><span>ENFOQUE</span><strong>Tradición y presencia digital</strong></div></aside><div class="case-cover"><img src="images/europa-brasa.jpeg" alt="Fuego y brasas de la cocina del Restaurante Europa" loading="eager"></div>
+<section class="case-section"><div><p class="eyebrow">01 — EL PROYECTO</p><h2>Tradición,<br>otra mirada.</h2></div><div class="copy"><p>Restaurante Europa es un negocio familiar situado en Fredes, con más de 50 años de historia. El reto era trasladar esa trayectoria al entorno digital sin perder su esencia. Mi trabajo reúne el diseño y desarrollo de la web, la organización de contenidos y una dirección visual coherente para la comunicación en Instagram: hacer que quien todavía no conoce el restaurante pueda descubrir su cocina, su historia y cómo visitarlo.</p></div></section>
 <div class="case-photo-pair"><figure><img src="images/europa-parrilla.jpeg" alt="Carne cocinándose a la brasa" loading="lazy"><figcaption>EL FUEGO / EL OFICIO</figcaption></figure><figure><img src="images/europa-interior.jpeg" alt="Interior del restaurante" loading="lazy"><figcaption>EL ESPACIO / LA HISTORIA</figcaption></figure></div><section class="case-section"><div><p class="eyebrow">02 — LENGUAJE VISUAL</p><h2>Una identidad<br>con raíces.</h2></div><div><p class="copy">Una identidad visual que parte de lo esencial: el fuego, la madera, las recetas de siempre y la historia del lugar. Tipografía con carácter, tonos cálidos y fotografía natural para construir un lenguaje reconocible, cercano y auténtico.</p><div class="case-colors"><div class="case-swatch">NEGRO</div><div class="case-swatch">CREMA CÁLIDO</div><div class="case-swatch">MARRÓN MADERA</div></div></div></section>
 <section class="case-art"><p class="eyebrow">03 — DIRECCIÓN DE ARTE</p><h2>Palabras de casa.</h2><div class="case-posters case-story">
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_37.png" alt="Diseño original Receptes de sempre, fondo crema" loading="lazy"><figcaption>01 / RECEPTES DE SEMPRE</figcaption></figure>
@@ -208,7 +218,7 @@
 <figure><img src="images/europa-historia.jpeg" alt="Fotografía histórica del restaurante" loading="lazy"><figcaption>MEMORIA DEL LUGAR</figcaption></figure>
 <figure><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_58.png" alt="Diseño original Cuina de muntanya, fondo negro" loading="lazy"><figcaption>06 / CUINA DE MUNTANYA</figcaption></figure>
 </div></section>
-<section class="case-section"><div><p class="eyebrow">04 — PRESENCIA DIGITAL</p><h2>Más allá<br>de la mesa.</h2></div><div class="copy"><p>La dirección visual se aplica a las redes sociales, la página web y la comunicación digital, creando una presencia reconocible y coherente en distintos formatos.</p><p style="margin-top:25px;font-size:12px;letter-spacing:.1em">WEB / REDES SOCIALES / CONTENIDO VISUAL</p></div></section>
+<section class="case-section"><div><p class="eyebrow">04 — PRESENCIA DIGITAL</p><h2>Más allá<br>de la mesa.</h2></div><div class="copy"><p>El diseño conecta la web con la comunicación en Instagram. Organicé la información para que fuera fácil conocer el restaurante, explorar su cocina y encontrar los datos de contacto, manteniendo un lenguaje visual reconocible entre formatos.</p><p style="margin-top:25px;font-size:12px;letter-spacing:.1em">WEB / REDES SOCIALES / CONTENIDO VISUAL</p></div></section>
 <div class="digital-showcase">
 <div class="digital-website">
 <div class="digital-index"><span>01 / DISEÑO WEB</span><span>RESTAURANTEUROPAFREDES.ES ↗</span></div>
@@ -235,7 +245,7 @@
 <a class="digital-social-photo" href="https://www.instagram.com/restauranteuropa2/" target="_blank" rel="noopener noreferrer" aria-label="Ver el Instagram de Restaurante Europa"><img src="images/europa-interior.jpeg" alt="Interior del Restaurante Europa, imagen de la comunicación digital" loading="lazy"><span><b>@RESTAURANTEUROPA2</b><span>VER PERFIL ↗</span></span></a>
 </div>
 </div>
-<div class="case-outro"><p>Más de 50 años de historia.<br>Una nueva forma de contarla.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
+<div class="case-outro europa-outro"><div><p>¿Tu negocio tiene<br>una historia que contar?</p><span class="europa-outro-sub">Podemos darle forma a su presencia visual y digital, sin perder lo que lo hace único.</span></div><div class="europa-outro-links"><a class="europa-contact-link" href="index.html#contact">HABLEMOS DE TU PROYECTO ↗</a><a href="index.html#work">← TODOS LOS PROYECTOS</a></div></div>
 </main>
 <script>
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
