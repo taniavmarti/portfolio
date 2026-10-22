@@ -141,6 +141,35 @@
 .digital-social-art img{display:block;width:100%;height:auto}
 .digital-social-art figcaption{font-size:10px;letter-spacing:.1em;margin-top:15px}
 @media(max-width:700px){.digital-index{font-size:8px}.digital-web-image{height:420px}.digital-web-overlay strong{font-size:clamp(45px,11vw,70px)}.digital-social{display:flex;flex-direction:column;gap:65px;align-items:stretch;padding:90px 0 40px}.digital-social-copy{padding-top:0}.digital-social h3{margin:30px 0}.digital-social-art{width:78%;align-self:flex-end;transform:rotate(2deg)}}
+
+/* Real website portfolio sequence */
+.digital-real-browser{display:block;text-decoration:none;color:inherit;border:1px solid #aaa9a4;background:#111}
+.digital-real-browser>img{width:100%;height:auto;display:block}
+.digital-browser-arrow{margin-left:auto;font-size:20px}
+.digital-editorial-sequence{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start;margin:clamp(100px,12vw,210px) 0 100px}
+.digital-shot{min-width:0;margin:0}
+.digital-shot img{display:block;width:100%;height:auto;object-fit:contain;background:transparent}
+.digital-shot figcaption{font-size:10px;letter-spacing:.11em;padding-top:13px}
+.digital-shot-brasa{grid-column:1/span 9;grid-row:1}
+.digital-sequence-label{grid-column:10/span 3;grid-row:1;align-self:end;padding:0 0 60px 30px}
+.digital-sequence-label span{font-size:10px;letter-spacing:.12em}
+.digital-sequence-label p{font-size:clamp(15px,1.5vw,23px);line-height:1.4;margin-top:25px}
+.digital-shot-history{grid-column:7/span 5;grid-row:2;margin-top:130px}
+.digital-shot-menu{grid-column:1/span 4;grid-row:2;margin-top:300px}
+.digital-shot-contact{grid-column:2/span 10;grid-row:3;margin-top:180px}
+.digital-social{border-top:1px solid #c6c3be}
+.digital-social-sign{background:#111;color:#eee7da;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,2vw,36px);transform:rotate(2deg)}
+.digital-social-sign span{font-size:clamp(9px,.9vw,13px);letter-spacing:.12em}
+.digital-social-sign strong{font-size:clamp(38px,4vw,90px);letter-spacing:-.065em;line-height:.91;font-weight:700}
+@media(max-width:700px){
+.digital-editorial-sequence{display:flex;flex-direction:column;align-items:stretch;gap:75px;margin:80px 0}
+.digital-shot-brasa{width:100%}
+.digital-sequence-label{padding:0;width:80%;align-self:flex-end}
+.digital-shot-history{width:70%;align-self:flex-end;margin:0}
+.digital-shot-menu{width:72%;margin:0}
+.digital-shot-contact{width:100%;margin:0}
+.digital-social-sign{width:80%;align-self:flex-end}
+}
 </style>
 </head>
 <body>
@@ -165,23 +194,30 @@
 <section class="case-section"><div><p class="eyebrow">04 — PRESENCIA DIGITAL</p><h2>Más allá<br>de la mesa.</h2></div><div class="copy"><p>La dirección visual se aplica a las redes sociales, la página web y la comunicación digital, creando una presencia reconocible y coherente en distintos formatos.</p><p style="margin-top:25px;font-size:12px;letter-spacing:.1em">WEB / REDES SOCIALES / CONTENIDO VISUAL</p></div></section>
 <div class="digital-showcase">
 <div class="digital-website">
-<div class="digital-index"><span>01 / EXPERIENCIA WEB</span><span>DISEÑO · ESTRUCTURA · CONTENIDO</span></div>
-<div class="digital-web-frame">
-<div class="digital-web-top"><span class="digital-web-dots"><i></i><i></i><i></i></span><span>restauranteuropafredes.es</span><a href="https://restauranteuropafredes.es/" target="_blank" rel="noopener noreferrer" aria-label="Abrir la web del restaurante">↗</a></div>
-<div class="digital-web-image"><img src="images/europa-interior.jpeg" alt="Interior del Restaurante Europa, imagen de la identidad digital" loading="lazy"><div class="digital-web-overlay"><span>RESTAURANTE EUROPA · FREDES</span><strong>La tradición<br>sigue viva.</strong><a href="https://restauranteuropafredes.es/" target="_blank" rel="noopener noreferrer">EXPLORAR LA WEB ↗</a></div></div>
+<div class="digital-index"><span>01 / DISEÑO WEB</span><span>RESTAURANTEUROPAFREDES.ES ↗</span></div>
+<a class="digital-real-browser" href="https://restauranteuropafredes.es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la web real de Restaurante Europa">
+<div class="digital-web-top"><span class="digital-web-dots"><i></i><i></i><i></i></span><span>restauranteuropafredes.es</span><span class="digital-browser-arrow">↗</span></div>
+<img src="images/europa-web-home.png" alt="Diseño real de la portada de la web Restaurante Europa" loading="lazy">
+</a>
+<p class="digital-note">Diseño web, estructura de contenidos y experiencia digital para trasladar la esencia del restaurante a la pantalla.</p>
 </div>
-<p class="digital-note">Diseño y desarrollo de la presencia web: una experiencia clara, cercana y fiel al carácter del restaurante. <em>Composición editorial, no captura literal de la web.</em></p>
+<div class="digital-editorial-sequence">
+<figure class="digital-shot digital-shot-brasa"><img src="images/europa-web-brasa.png" alt="Sección La brasa de la web real" loading="lazy"><figcaption>02 / EL FUEGO COMO PROTAGONISTA</figcaption></figure>
+<div class="digital-sequence-label"><span>DISEÑO EDITORIAL</span><p>Una web que combina grandes titulares, contrastes y fotografías para contar la historia del lugar.</p></div>
+<figure class="digital-shot digital-shot-history"><img src="images/europa-web-historia-resenas-galeria.png" alt="Historia, reseñas y galería en la web de Restaurante Europa" loading="lazy"><figcaption>03 / HISTORIA, RESEÑAS Y GALERÍA</figcaption></figure>
+<figure class="digital-shot digital-shot-menu"><img src="images/europa-web-cocina.png" alt="Platos de la casa y carta en la web de Restaurante Europa" loading="lazy"><figcaption>04 / COCINA Y CONTENIDO</figcaption></figure>
+<figure class="digital-shot digital-shot-contact"><img src="images/europa-web-contacto.png" alt="Apartado real de reservas y contacto de la web" loading="lazy"><figcaption>05 / RESERVAS Y CONTACTO</figcaption></figure>
 </div>
 <div class="digital-social">
-<div class="digital-social-copy"><span class="digital-index-label">02 / REDES SOCIALES</span><h3>Del restaurante<br><em>a la pantalla.</em></h3><p>Una dirección de arte que traslada las recetas, el fuego y la vida cotidiana de Europa a una comunicación visual reconocible.</p><a href="https://www.instagram.com/restauranteuropa2/" target="_blank" rel="noopener noreferrer">VER INSTAGRAM ↗</a></div>
-<figure class="digital-social-art"><img src="images/Imatge%20de%20ChatGPT%2021%20d%E2%80%99oct.%20del%202026%2C%2011_26_29.png" alt="Publicación A taula del Restaurante Europa" loading="lazy"><figcaption>IDENTIDAD VISUAL APLICADA A REDES</figcaption></figure>
+<div class="digital-social-copy"><span class="digital-index-label">06 / REDES SOCIALES</span><h3>Del restaurante<br><em>a la pantalla.</em></h3><p>La identidad visual también vive en Instagram: fotografía, recetas y comunicación cotidiana con una voz propia.</p><a href="https://www.instagram.com/restauranteuropa2/" target="_blank" rel="noopener noreferrer">VER INSTAGRAM ↗</a></div>
+<div class="digital-social-sign"><span>RESTAURANTE EUROPA</span><strong>RECEPTES<br>DE SEMPRE.</strong><span>FREDES · LA TINENÇA DE BENIFASSÀ</span></div>
 </div>
 </div>
 <div class="case-outro"><p>Más de 50 años de historia.<br>Una nueva forma de contarla.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
 </main>
 <script>
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const targets = document.querySelectorAll('.case-hero, .case-cover, .case-section > div, .case-photo-pair figure, .case-art > h2, .case-art > .eyebrow, .case-posters > *, .digital-website, .digital-social-copy, .digital-social-art, .case-outro > *');
+  const targets = document.querySelectorAll('.case-hero, .case-cover, .case-section > div, .case-photo-pair figure, .case-art > h2, .case-art > .eyebrow, .case-posters > *, .digital-website, .digital-shot, .digital-sequence-label, .digital-social-copy, .digital-social-sign, .case-outro > *');
   targets.forEach(el => el.classList.add('reveal'));
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
