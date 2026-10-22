@@ -171,6 +171,22 @@ body{background:#261038;color:#f7eaff}
 .r-screen-top{height:30px!important}
 .r-screen-top small{font-size:8px!important}
 }
+
+.r-showcase{margin-top:65px;display:grid;gap:24px}
+.r-showcase figure{margin:0;min-width:0;background:#fff;overflow:hidden}
+.r-showcase-main{display:grid;grid-template-columns:1.35fr .65fr;align-items:stretch}
+.r-showcase-image{min-width:0;background:#f7f2fb;overflow:hidden}
+.r-showcase-main .r-showcase-image{max-height:640px}
+.r-showcase img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}
+.r-showcase figcaption{padding:clamp(25px,4vw,60px);display:flex;flex-direction:column;justify-content:center;gap:20px}
+.r-showcase figcaption span{font-size:10px;letter-spacing:.15em;color:#7b37ad}
+.r-showcase figcaption strong{font-family:"Cabin",sans-serif;font-size:clamp(27px,3vw,54px);font-weight:400;letter-spacing:-.05em;line-height:1}
+.r-showcase figcaption p{font-size:15px;line-height:1.5;max-width:370px}
+.r-showcase-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.r-showcase-pair figure{display:flex;flex-direction:column}
+.r-showcase-pair .r-showcase-image{height:clamp(280px,36vw,530px)}
+.r-showcase-pair figcaption{flex:1;min-height:230px}
+@media(max-width:700px){.r-showcase-main,.r-showcase-pair{grid-template-columns:1fr}.r-showcase-main .r-showcase-image{height:420px}.r-showcase figcaption{padding:28px}.r-showcase-pair .r-showcase-image{height:350px}}
 </style>
 </head>
 <body>
@@ -181,7 +197,10 @@ body{background:#261038;color:#f7eaff}
 <section class="r-feature r-reveal"><div class="r-feature-copy"><span><img class="r-logo" src="images/raconet-logo.png" alt="Logotipo original de Lo Raconet Màgic" onerror="this.style.display='none'"><span class="r-label">01 / EL PROYECTO</span></span><strong>Un pequeño<br>universo.<br>Una tienda<br>real.</strong><a href="https://www.loraconetmagic.com/" target="_blank" rel="noopener noreferrer">EXPLORAR LA TIENDA ↗</a></div><div class="r-feature-art" aria-label="Presentación del diseño de la tienda Shopify"><div class="r-screen"><div class="r-screen-top"><i></i><i></i><i></i><small>loraconetmagic.com</small></div><div class="r-screen-body"><img src="images/raconet-home.webp" alt="Captura real de la página principal de Lo Raconet Màgic" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><div class="r-screen-fallback"><b>LO RACONET MÀGIC</b><strong>Una tienda online<br>con personalidad.</strong><small>SHOPIFY / DISEÑO WEB</small></div></div></div><span class="r-asset-caption">WEB REAL / SHOPIFY</span></div></section>
 <section class="r-section r-reveal"><div><span class="r-label">02 / MI PRIMER PROYECTO WEB</span><h2>Más que<br><em>una web.</em></h2></div><div class="r-section-copy"><p>Lo Raconet Màgic fue mi primera experiencia en diseño web y mi introducción al comercio electrónico. Diseñé y configuré la tienda en Shopify, organicé el catálogo, incorporé fotografías y descripciones de los productos y comprobé el recorrido de compra. Un proyecto de aprendizaje práctico, desde la estructura de la web hasta su funcionamiento real.</p></div></section>
 <div class="r-steps r-reveal"><div class="r-step"><span>01 / DISEÑO</span><strong>Interfaz y estructura</strong><p>Organización visual y navegación de la tienda.</p></div><div class="r-step"><span>02 / CATÁLOGO</span><strong>Productos y contenido</strong><p>Publicación de fotografías, fichas y descripciones.</p></div><div class="r-step"><span>03 / FUNCIONALIDAD</span><strong>Proceso de compra</strong><p>Revisión del funcionamiento del e-commerce.</p></div><div class="r-step"><span>04 / VISIBILIDAD</span><strong>SEO e indexación</strong><p>Títulos, metadescripciones y presencia en Google.</p></div></div>
-<section class="r-journey r-reveal"><div class="r-journey-head"><div><span class="r-label">03 / EXPERIENCIA DE COMPRA</span><h2>Descubrir.<br>Elegir. Comprar.</h2></div><span class="r-label">UN RECORRIDO COMPLETO ↘</span></div><div class="r-flow"><div class="r-flow-item"><small>01 / EXPLORACIÓN</small><strong>Encontrar<br>lo especial.</strong><p>Productos y colecciones organizados para facilitar la navegación.</p></div><div class="r-flow-item"><small>02 / PRODUCTO</small><strong>Conocer<br>cada pieza.</strong><p>Fotografías y descripciones para acompañar la decisión de compra.</p></div><div class="r-flow-item"><small>03 / COMPRA</small><strong>Del carrito<br>al pedido.</strong><p>Comprobación del proceso de compra y del funcionamiento de la tienda.</p></div></div></section>
+<section class="r-journey r-reveal"><div class="r-journey-head"><div><span class="r-label">03 / EXPERIENCIA DE COMPRA</span><h2>Descubrir.<br>Elegir. Comprar.</h2></div><span class="r-label">UN RECORRIDO COMPLETO ↘</span></div><div class="r-showcase">
+<figure class="r-showcase-main"><div class="r-showcase-image"><img src="images/raconet-orion-ficha.webp" loading="lazy" alt="Ficha de producto Pendientes Orión en la tienda Shopify"></div><figcaption><span>01 / FICHA DE PRODUCTO</span><strong>Del catálogo a la ficha.</strong><p>Configuración de la información de producto y su presentación dentro de la tienda online.</p></figcaption></figure>
+<div class="r-showcase-pair"><figure><div class="r-showcase-image"><img src="images/raconet-orion-galeria.webp" loading="lazy" alt="Galería de imágenes y detalles de producto en Shopify"></div><figcaption><span>02 / CONTENIDO</span><strong>Una experiencia para explorar.</strong><p>Organización de imágenes, información y navegación entre productos.</p></figcaption></figure><figure><div class="r-showcase-image"><img src="images/raconet-palo-santo.webp" loading="lazy" alt="Ficha de Palo Santo en Lo Raconet Màgic"></div><figcaption><span>03 / CATÁLOGO</span><strong>Una tienda, distintas categorías.</strong><p>Adaptación de las fichas a los diferentes productos del catálogo.</p></figcaption></figure></div>
+</div></section>
 <section class="r-seo r-reveal"><div><span class="r-label">04 / POSICIONAMIENTO</span><h2>Diseñada<br>para ser<br><em>encontrada.</em></h2></div><div><p>El trabajo también incluyó la optimización de títulos SEO, metadescripciones y la indexación de páginas para facilitar su aparición en los resultados de Google.</p><p class="r-seo-note">No se atribuyen resultados de tráfico o ventas: la promoción en redes sociales corresponde a la marca.</p></div></section>
 <div class="r-outro r-reveal"><p>Una experiencia digital<br>pensada para funcionar.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
 </main>
