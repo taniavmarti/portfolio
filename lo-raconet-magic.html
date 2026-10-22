@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lo Raconet Màgic — Diseño e-commerce en Shopify, catálogo, experiencia de compra y SEO. Proyecto de Tania Vidal.">
+<title>Lo Raconet Màgic — Tania Vidal</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--paper:#e8e5dc;--ink:#171a15;--olive:#505747;--line:#b5b6ab}
+.raconet{background:var(--paper);color:var(--ink);padding:28px 32px 90px;overflow:hidden}
+.r-top,.r-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.r-top{display:flex;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.r-hero{padding:clamp(75px,10vw,160px) 0 80px}
+.r-hero .r-label{margin-bottom:26px}
+.r-hero h1{font-size:clamp(75px,13.8vw,230px);font-weight:500;line-height:.77;letter-spacing:-.085em}
+.r-hero h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.075em}
+.r-hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-top:70px}
+.r-hero-bottom p{max-width:480px;font-size:clamp(17px,1.6vw,23px);line-height:1.45}
+.r-hero-bottom span{font-size:10px;letter-spacing:.13em;white-space:nowrap}
+.r-feature{min-height:clamp(470px,65vw,850px);background:var(--olive);color:#eee9dc;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.r-feature-copy{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(25px,5vw,75px)}
+.r-feature-copy .r-label{opacity:.75}
+.r-feature-copy strong{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(48px,6vw,112px);line-height:.97;letter-spacing:-.06em}
+.r-feature-copy a{width:fit-content;border-bottom:1px solid currentColor;padding-bottom:8px;font-size:11px;letter-spacing:.12em}
+.r-feature-art{display:grid;place-items:center;position:relative;border-left:1px solid #899080;overflow:hidden}
+.r-feature-art:before,.r-feature-art:after{content:"";position:absolute;border:1px solid rgba(238,233,220,.5);border-radius:50%;width:70%;aspect-ratio:1}
+.r-feature-art:after{width:50%;transform:rotate(45deg)}
+.r-feature-art span{font:italic clamp(110px,20vw,360px)/1 Georgia,serif;z-index:1;transform:translateY(-7%);opacity:.9}
+.r-section{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,7vw,120px);padding:clamp(95px,11vw,170px) 0;border-bottom:1px solid var(--line)}
+.r-section h2{font-size:clamp(48px,6.7vw,112px);font-weight:500;line-height:.95;letter-spacing:-.07em;margin-top:25px}
+.r-section h2 em{font-family:Georgia,serif;font-weight:400}
+.r-section-copy{align-self:end;max-width:540px}
+.r-section-copy p{font-size:clamp(17px,1.8vw,25px);line-height:1.48}
+.r-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:50px}
+.r-step{border-top:1px solid var(--line);padding:20px 8px 15px 0;min-height:190px}
+.r-step span{display:block;font-size:10px;letter-spacing:.12em;margin-bottom:34px}
+.r-step strong{display:block;font-size:clamp(18px,2.1vw,30px);line-height:1.1;font-weight:500;letter-spacing:-.04em}
+.r-step p{margin-top:12px;font-size:12px;line-height:1.5;opacity:.7}
+.r-journey{padding:clamp(95px,10vw,160px) 0}
+.r-journey-head{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.r-journey h2{font-size:clamp(48px,7vw,112px);line-height:.9;letter-spacing:-.07em;font-weight:500;margin-top:25px}
+.r-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:75px}
+.r-flow-item{background:#d7d8cc;min-height:clamp(260px,29vw,420px);padding:clamp(20px,2.5vw,36px);display:flex;flex-direction:column;justify-content:space-between}
+.r-flow-item:nth-child(2){background:#b7bdac}
+.r-flow-item:nth-child(3){background:#313a30;color:#eee9dc}
+.r-flow-item small{font-size:10px;letter-spacing:.14em}
+.r-flow-item strong{font-family:Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(34px,4vw,72px);line-height:1;letter-spacing:-.055em}
+.r-flow-item p{font-size:13px;line-height:1.5;max-width:290px}
+.r-seo{background:#1d241e;color:#eee9dc;padding:clamp(35px,6vw,100px);display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:end}
+.r-seo h2{font-size:clamp(45px,6vw,105px);font-weight:500;line-height:.95;letter-spacing:-.07em;margin-top:45px}
+.r-seo p{max-width:470px;font-size:clamp(17px,1.6vw,23px);line-height:1.5}
+.r-seo-note{margin-top:24px!important;font-size:12px!important;opacity:.65}
+.r-outro{padding:clamp(100px,12vw,180px) 0 20px;display:flex;align-items:end;justify-content:space-between;gap:35px}
+.r-outro p{font:italic clamp(38px,5vw,80px)/1.08 Georgia,serif;letter-spacing:-.04em}
+.r-outro a{border-bottom:1px solid currentColor;padding-bottom:7px;font-size:11px;letter-spacing:.12em;white-space:nowrap}
+@media(max-width:700px){
+.raconet{padding:22px 20px 65px}
+.r-hero{padding:75px 0 60px}.r-hero h1{font-size:clamp(67px,15vw,115px)}
+.r-hero-bottom{display:block;margin-top:40px}.r-hero-bottom span{display:block;margin-top:25px}
+.r-feature{grid-template-columns:1fr;min-height:620px}.r-feature-copy{min-height:370px}.r-feature-art{min-height:250px;border-left:0;border-top:1px solid #899080}.r-feature-art span{font-size:160px}
+.r-section,.r-seo{grid-template-columns:1fr;gap:45px}
+.r-steps{grid-template-columns:1fr 1fr;gap:18px}
+.r-journey-head{display:block}.r-flow{grid-template-columns:1fr;gap:10px;margin-top:45px}.r-flow-item{min-height:260px}
+.r-outro{display:block}.r-outro a{display:inline-block;margin-top:35px}
+}
+@media(prefers-reduced-motion:no-preference){.r-reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.r-reveal.visible{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="site-header"><a class="logo" href="index.html#home">T. VIDAL</a><nav aria-label="Main navigation"><a href="index.html#home">[01] INICIO</a><a href="index.html#work">[02] PROYECTOS</a><a href="index.html#about">[03] SOBRE MÍ</a><a href="index.html#contact">[04] CONTACTO</a></nav></header>
+<main class="raconet">
+<div class="r-top"><span>02 / PROYECTOS</span><a href="index.html#work">← VOLVER A PROYECTOS</a></div>
+<section class="r-hero r-reveal"><p class="r-label">E-COMMERCE / SHOPIFY / UX / SEO</p><h1>Lo Raconet<br><em>Màgic.</em></h1><div class="r-hero-bottom"><p>Una tienda online donde el diseño no termina en el escaparate: acompaña cada paso, desde descubrir un producto hasta completar una compra.</p><span>DISEÑO Y CONFIGURACIÓN E-COMMERCE ↘</span></div></section>
+<section class="r-feature r-reveal"><div class="r-feature-copy"><span class="r-label">01 / EL PROYECTO</span><strong>Un pequeño<br>universo.<br>Una tienda<br>real.</strong><a href="https://www.loraconetmagic.com/" target="_blank" rel="noopener noreferrer">EXPLORAR LA TIENDA ↗</a></div><div class="r-feature-art" aria-label="Composición tipográfica decorativa"><span>✳</span></div></section>
+<section class="r-section r-reveal"><div><span class="r-label">02 / MI PAPEL</span><h2>Más que<br><em>una web.</em></h2></div><div class="r-section-copy"><p>Diseñé y configuré la tienda en Shopify, organicé el catálogo, incorporé las fotografías y descripciones de los productos y comprobé que el recorrido de compra funcionara correctamente.</p></div></section>
+<div class="r-steps r-reveal"><div class="r-step"><span>01 / DISEÑO</span><strong>Interfaz y estructura</strong><p>Organización visual y navegación de la tienda.</p></div><div class="r-step"><span>02 / CATÁLOGO</span><strong>Productos y contenido</strong><p>Publicación de fotografías, fichas y descripciones.</p></div><div class="r-step"><span>03 / FUNCIONALIDAD</span><strong>Proceso de compra</strong><p>Revisión del funcionamiento del e-commerce.</p></div><div class="r-step"><span>04 / VISIBILIDAD</span><strong>SEO e indexación</strong><p>Títulos, metadescripciones y presencia en Google.</p></div></div>
+<section class="r-journey r-reveal"><div class="r-journey-head"><div><span class="r-label">03 / EXPERIENCIA DE COMPRA</span><h2>Descubrir.<br>Elegir. Comprar.</h2></div><span class="r-label">UN RECORRIDO COMPLETO ↘</span></div><div class="r-flow"><div class="r-flow-item"><small>01 / EXPLORACIÓN</small><strong>Encontrar<br>lo especial.</strong><p>Productos y colecciones organizados para facilitar la navegación.</p></div><div class="r-flow-item"><small>02 / PRODUCTO</small><strong>Conocer<br>cada pieza.</strong><p>Fotografías y descripciones para acompañar la decisión de compra.</p></div><div class="r-flow-item"><small>03 / COMPRA</small><strong>Del carrito<br>al pedido.</strong><p>Comprobación del proceso de compra y del funcionamiento de la tienda.</p></div></div></section>
+<section class="r-seo r-reveal"><div><span class="r-label">04 / POSICIONAMIENTO</span><h2>Diseñada<br>para ser<br><em>encontrada.</em></h2></div><div><p>El trabajo también incluyó la optimización de títulos SEO, metadescripciones y la indexación de páginas para facilitar su aparición en los resultados de Google.</p><p class="r-seo-note">No se atribuyen resultados de tráfico o ventas: la promoción en redes sociales corresponde a la marca.</p></div></section>
+<div class="r-outro r-reveal"><p>Una experiencia digital<br>pensada para funcionar.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
+</main>
+<script>if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const els=document.querySelectorAll('.r-reveal');const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.06});els.forEach(e=>obs.observe(e))}else{document.querySelectorAll('.r-reveal').forEach(e=>e.classList.add('visible'))}</script>
+</body></html>
