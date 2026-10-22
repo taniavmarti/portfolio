@@ -170,6 +170,18 @@
 .digital-shot-contact{width:100%;margin:0}
 .digital-social-sign{width:80%;align-self:flex-end}
 }
+
+/* Keep low-resolution narrow screenshots near native display size */
+.digital-editorial-sequence{column-gap:clamp(12px,2vw,32px)}
+.digital-shot-menu{grid-column:2/span 3;grid-row:2;justify-self:start;width:100%;max-width:340px;margin-top:220px}
+.digital-shot-history{grid-column:8/span 3;grid-row:2;justify-self:end;width:100%;max-width:330px;margin-top:95px}
+.digital-shot-menu img,.digital-shot-history img{width:100%;height:auto;image-rendering:auto}
+.digital-shot-brasa img,.digital-shot-contact img{width:100%;height:auto}
+@media(max-width:700px){
+.digital-shot-menu,.digital-shot-history{width:min(72%,330px);max-width:330px;margin-top:0}
+.digital-shot-menu{align-self:flex-start}
+.digital-shot-history{align-self:flex-end}
+}
 </style>
 </head>
 <body>
