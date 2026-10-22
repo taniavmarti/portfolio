@@ -175,6 +175,18 @@
 .digital-shot-contact{width:100%}
 .digital-social-sign{width:80%;align-self:flex-end}
 }
+
+/* Final digital handoff: original photography, quiet interactions */
+.digital-social-photo{position:relative;display:block;overflow:hidden;min-height:370px;aspect-ratio:4/5;color:#fff;text-decoration:none;background:#151515}
+.digital-social-photo>img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.digital-social-photo:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.7));pointer-events:none}
+.digital-social-photo>span{position:absolute;z-index:1;left:clamp(18px,3vw,45px);right:clamp(18px,3vw,45px);bottom:clamp(18px,3vw,45px);display:flex;justify-content:space-between;align-items:end;gap:12px;font-size:clamp(10px,1vw,13px);letter-spacing:.08em}
+.digital-social-photo>span b{font-weight:600}
+.digital-social-photo:hover>img{transform:scale(1.045)}
+.digital-real-browser{transition:box-shadow .3s ease}
+.digital-real-browser:hover{box-shadow:0 20px 50px rgba(0,0,0,.12)}
+@media(max-width:700px){.digital-social-photo{min-height:300px;aspect-ratio:4/5}.digital-social-photo>span{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.digital-social-photo>img,.digital-real-browser{transition:none}}
 </style>
 </head>
 <body>
@@ -220,14 +232,14 @@
 </div>
 <div class="digital-social">
 <div class="digital-social-copy"><span class="digital-index-label">06 / REDES SOCIALES</span><h3>Del restaurante<br><em>a la pantalla.</em></h3><p>La identidad visual también vive en Instagram: fotografía, recetas y comunicación cotidiana con una voz propia.</p><a href="https://www.instagram.com/restauranteuropa2/" target="_blank" rel="noopener noreferrer">VER INSTAGRAM ↗</a></div>
-<div class="digital-social-sign"><span>RESTAURANTE EUROPA</span><strong>RECEPTES<br>DE SEMPRE.</strong><span>FREDES · LA TINENÇA DE BENIFASSÀ</span></div>
+<a class="digital-social-photo" href="https://www.instagram.com/restauranteuropa2/" target="_blank" rel="noopener noreferrer" aria-label="Ver el Instagram de Restaurante Europa"><img src="images/europa-interior.jpeg" alt="Interior del Restaurante Europa, imagen de la comunicación digital" loading="lazy"><span><b>@RESTAURANTEUROPA2</b><span>VER PERFIL ↗</span></span></a>
 </div>
 </div>
 <div class="case-outro"><p>Más de 50 años de historia.<br>Una nueva forma de contarla.</p><a href="index.html#work">← TODOS LOS PROYECTOS</a></div>
 </main>
 <script>
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const targets = document.querySelectorAll('.case-hero, .case-cover, .case-section > div, .case-photo-pair figure, .case-art > h2, .case-art > .eyebrow, .case-posters > *, .digital-website, .digital-shot, .digital-sequence-label, .digital-social-copy, .digital-social-sign, .case-outro > *');
+  const targets = document.querySelectorAll('.case-hero, .case-cover, .case-section > div, .case-photo-pair figure, .case-art > h2, .case-art > .eyebrow, .case-posters > *, .digital-website, .digital-shot, .digital-spread-copy, .digital-social-copy, .digital-social-photo, .case-outro > *');
   targets.forEach(el => el.classList.add('reveal'));
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
