@@ -208,6 +208,19 @@ body{background:#261038;color:#f7eaff}
 .r-showcase-new .r-showcase-reverse figcaption{order:1}
 .r-showcase-new .r-showcase-reverse figcaption span{color:#e9cfff}
 @media(max-width:700px){.r-showcase-new .r-showcase-main,.r-showcase-new .r-showcase-reverse{grid-template-columns:1fr}.r-showcase-new .r-showcase-main .r-showcase-image{height:390px}.r-showcase-new .r-showcase-reverse .r-showcase-image{order:0}.r-showcase-new .r-showcase-reverse figcaption{order:1}}
+
+.r-mobile-section{background:#fff;color:#281238;padding:clamp(55px,7vw,120px) clamp(24px,5vw,85px)}
+.r-mobile-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:end;margin-bottom:55px}
+.r-mobile-intro h2{font:400 clamp(54px,8vw,125px)/.9 "Cabin",sans-serif;letter-spacing:-.07em;margin:20px 0 0}
+.r-mobile-intro h2 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.055em}
+.r-mobile-intro>p{font:400 clamp(17px,1.6vw,24px)/1.5 "Cabin",sans-serif;max-width:490px}
+.r-mobile-gallery{display:grid;grid-template-columns:1fr 1fr .65fr;align-items:start;gap:clamp(15px,2.4vw,42px)}
+.r-mobile-shot{margin:0;min-width:0}
+.r-mobile-shot img{display:block;width:100%;height:auto;max-height:650px;object-fit:cover;object-position:top center;border:10px solid #f1e6f8;border-radius:23px;box-shadow:0 15px 40px rgba(60,20,90,.10)}
+.r-mobile-shot figcaption{font:600 10px/1.5 "Cabin",sans-serif;letter-spacing:.15em;color:#7437a5;margin-top:20px}
+.r-mobile-offset{margin-top:100px}
+.r-mobile-third{margin-top:195px}
+@media(max-width:760px){.r-mobile-intro{grid-template-columns:1fr;gap:22px}.r-mobile-gallery{grid-template-columns:1fr 1fr;gap:14px}.r-mobile-third{display:none}.r-mobile-offset{margin-top:65px}.r-mobile-shot img{border-width:5px;border-radius:13px}.r-mobile-shot figcaption{font-size:9px}}
 </style>
 </head>
 <body>
@@ -223,7 +236,7 @@ body{background:#261038;color:#f7eaff}
 <figure class="r-showcase-main"><div class="r-showcase-image"><img src="images/raconet-coleccion-entre-nuvols.png" loading="lazy" alt="Colección Entre Núvols: organización y presentación del catálogo en Shopify"></div><figcaption><span>01 / ORGANIZACIÓN DEL CATÁLOGO</span><strong>Encontrar lo que buscas.</strong><p>Una colección con productos, precios y disponibilidad organizados para facilitar la exploración de la tienda.</p></figcaption></figure>
 <figure class="r-showcase-main r-showcase-reverse"><div class="r-showcase-image"><img src="images/raconet-ficha-palo-santo.png" loading="lazy" alt="Ficha de Palo Santo: imagen, descripción, precio y opciones de compra"></div><figcaption><span>02 / EXPERIENCIA DE COMPRA</span><strong>De la información a la compra.</strong><p>Presentación del producto con sus detalles y las acciones de compra dentro de una estructura clara.</p></figcaption></figure>
 </div></section>
-<section class="r-seo r-reveal"><div><span class="r-label">04 / POSICIONAMIENTO</span><h2>Diseñada<br>para ser<br><em>encontrada.</em></h2></div><div><p>El trabajo también incluyó la optimización de títulos SEO, metadescripciones y la indexación de páginas para facilitar su aparición en los resultados de Google.</p><p class="r-seo-note">Trabajo realizado: configuración SEO e indexación. Sin métricas de rendimiento verificadas para este caso de estudio.</p></div></section>
+<section class="r-mobile-section r-reveal" aria-labelledby="r-mobile-title"><div class="r-mobile-intro"><div><span class="r-label">04 / EXPERIENCIA MÓVIL</span><h2 id="r-mobile-title">La tienda,<br><em>en tu mano.</em></h2></div><p>La navegación, las categorías y el catálogo también se presentan en pantallas pequeñas. Una experiencia de compra pensada para explorar productos desde el móvil.</p></div><div class="r-mobile-gallery"><figure class="r-mobile-shot"><img src="images/raconet-movil-inicio.webp" loading="lazy" alt="Portada móvil de Lo Raconet Màgic con cabecera y navegación"><figcaption>01 / INICIO</figcaption></figure><figure class="r-mobile-shot r-mobile-offset"><img src="images/raconet-movil-catalogo.webp" loading="lazy" alt="Catálogo de joyas en móvil con dos columnas y opción de filtrar"><figcaption>02 / CATÁLOGO</figcaption></figure><figure class="r-mobile-shot r-mobile-third"><img src="images/raconet-movil-novedades.webp" loading="lazy" alt="Novedades y categorías de la tienda en la versión móvil"><figcaption>03 / DESCUBRIMIENTO</figcaption></figure></div></section><section class="r-seo r-reveal"><div><span class="r-label">05 / POSICIONAMIENTO</span><h2>Diseñada<br>para ser<br><em>encontrada.</em></h2></div><div><p>El trabajo también incluyó la optimización de títulos SEO, metadescripciones y la indexación de páginas para facilitar su aparición en los resultados de Google.</p><p class="r-seo-note">Trabajo realizado: configuración SEO e indexación. Sin métricas de rendimiento verificadas para este caso de estudio.</p></div></section>
 <div class="r-outro r-reveal"><div><p>¿Tienes un proyecto<br>entre manos?</p><span class="r-outro-sub">Hablemos de cómo darle forma, desde la estructura hasta los detalles visuales.</span></div><div class="r-outro-links"><a href="index.html#contact">HABLEMOS DE TU PROYECTO ↗</a><a href="index.html#work">← TODOS LOS PROYECTOS</a></div></div>
 </main>
 <script>if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const els=document.querySelectorAll('.r-reveal');const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.06});els.forEach(e=>obs.observe(e))}else{document.querySelectorAll('.r-reveal').forEach(e=>e.classList.add('visible'))}</script>
