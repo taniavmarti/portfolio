@@ -25,7 +25,7 @@
 .r-feature-art{display:grid;place-items:center;position:relative;border-left:1px solid #899080;overflow:hidden}
 .r-feature-art:before,.r-feature-art:after{content:"";position:absolute;border:1px solid rgba(238,233,220,.5);border-radius:50%;width:70%;aspect-ratio:1}
 .r-feature-art:after{width:50%;transform:rotate(45deg)}
-.r-feature-art span{font:italic clamp(110px,20vw,360px)/1 Georgia,serif;z-index:1;transform:translateY(-7%);opacity:.9}
+.r-feature-art > .decorative-letter{display:none}
 .r-feature-art:before,.r-feature-art:after{display:none}
 .r-screen{position:relative;z-index:1;width:88%;max-width:680px;background:#fff;box-shadow:0 28px 70px rgba(77,22,125,.24);transform:rotate(-3deg);transition:transform .6s ease}
 .r-feature:hover .r-screen{transform:rotate(-1deg) translateY(-7px)}
@@ -71,7 +71,7 @@
 .raconet{padding:22px 20px 65px}
 .r-hero{padding:75px 0 60px}.r-hero h1{font-size:clamp(67px,15vw,115px)}
 .r-hero-bottom{display:block;margin-top:40px}.r-hero-bottom span{display:block;margin-top:25px}
-.r-feature{grid-template-columns:1fr;min-height:620px}.r-feature-copy{min-height:370px}.r-feature-art{min-height:250px;border-left:0;border-top:1px solid #899080}.r-feature-art span{font-size:160px}
+.r-feature{grid-template-columns:1fr;min-height:620px}.r-feature-copy{min-height:370px}.r-feature-art{min-height:250px;border-left:0;border-top:1px solid #899080}
 .r-section,.r-seo{grid-template-columns:1fr;gap:45px}
 .r-steps{grid-template-columns:1fr 1fr;gap:18px}
 .r-journey-head{display:block}.r-flow{grid-template-columns:1fr;gap:10px;margin-top:45px}.r-flow-item{min-height:260px}
@@ -99,6 +99,42 @@ body{background:#261038;color:#f7eaff}
 .r-logo{display:block;width:140px;max-width:70%;height:auto;object-fit:contain;margin-bottom:35px;filter:brightness(0) invert(1)}
 .r-feature-copy strong{font-size:clamp(43px,5.4vw,98px)}
 @media(max-width:700px){.r-logo{width:110px}.raconet{background:linear-gradient(145deg,#d4b0f1,#eeddfa 45%,#b784ed 100%)}}
+
+/* Visual refinement: actual storefront first, lilac/white/violet rhythm */
+.raconet{background:#f6efff;color:#29123c}
+.r-hero{background:linear-gradient(122deg,#e1c2f7 0%,#f7efff 67%,#d7b1f7 100%);margin:0 -32px;padding:clamp(90px,9vw,140px) 32px 90px}
+.r-feature{grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr);min-height:650px;background:#7d35d4}
+.r-feature-copy{background:linear-gradient(150deg,#b07bdc,#863cdb);padding:clamp(30px,4vw,64px)}
+.r-feature-copy strong{font-size:clamp(43px,4.5vw,76px)}
+.r-feature-art{background:#f5edff;border-left:0;padding:clamp(25px,3.8vw,65px);overflow:visible}
+.r-screen{width:100%;max-width:none;transform:rotate(-1.5deg);box-shadow:0 22px 60px rgba(59,20,98,.2)}
+.r-feature:hover .r-screen{transform:rotate(0deg) translateY(-5px)}
+.r-screen-body{min-height:0}
+.r-screen-body img{width:100%;height:auto;object-fit:contain}
+.r-asset-caption{font:10px/1.2 Arial,sans-serif;transform:none;opacity:1;color:#64318f;right:25px;bottom:18px}
+.r-section{background:#fff;margin:0 -32px;padding:clamp(90px,10vw,150px) 32px;border:0}
+.r-steps{background:#fff;margin:0 -32px;padding:20px 32px 80px}
+.r-journey{background:#ead6fb;margin:0 -32px;padding:clamp(90px,9vw,145px) 32px}
+.r-flow-item{background:#fff;color:#2d1740}
+.r-flow-item:nth-child(2){background:#d8b6f6;color:#2d1740}
+.r-flow-item:nth-child(3){background:#7130bf;color:#fff}
+.r-seo{margin:0 -32px;background:#592096;color:#fff}
+.r-outro{background:#f6efff}
+.r-hero h1,.r-section h2,.r-journey h2,.r-seo h2{font-family:Arial,Helvetica,sans-serif}
+.r-feature-copy strong,.r-flow-item strong,.r-outro p{font-family:Georgia,'Times New Roman',serif}
+@media(max-width:900px){.r-feature{grid-template-columns:.85fr 1.15fr;min-height:500px}.r-feature-art{padding:25px}}
+@media(max-width:700px){
+.r-hero{margin:0 -20px;padding:75px 20px 60px}
+.r-feature{grid-template-columns:1fr;min-height:0}
+.r-feature-copy{min-height:360px}
+.r-feature-art{min-height:0;padding:36px 20px 48px}
+.r-screen{width:100%}
+.r-asset-caption{bottom:13px}
+.r-section{margin:0 -20px;padding:80px 20px}
+.r-steps{margin:0 -20px;padding:15px 20px 70px}
+.r-journey{margin:0 -20px;padding:85px 20px}
+.r-seo{margin:0 -20px}
+}
 </style>
 </head>
 <body>
