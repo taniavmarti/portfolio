@@ -142,32 +142,37 @@
 .digital-social-art figcaption{font-size:10px;letter-spacing:.1em;margin-top:15px}
 @media(max-width:700px){.digital-index{font-size:8px}.digital-web-image{height:420px}.digital-web-overlay strong{font-size:clamp(45px,11vw,70px)}.digital-social{display:flex;flex-direction:column;gap:65px;align-items:stretch;padding:90px 0 40px}.digital-social-copy{padding-top:0}.digital-social h3{margin:30px 0}.digital-social-art{width:78%;align-self:flex-end;transform:rotate(2deg)}}
 
-/* Real website presentation: ordered editorial sequence */
+/* Real website presentation — intentional editorial spreads */
 .digital-real-browser{display:block;text-decoration:none;color:inherit;border:1px solid #aaa9a4;background:#111}
 .digital-real-browser>img{width:100%;height:auto;display:block}
 .digital-browser-arrow{margin-left:auto;font-size:20px}
-.digital-editorial-sequence{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(14px,2vw,32px);row-gap:clamp(45px,6vw,105px);align-items:start;margin:clamp(65px,8vw,125px) 0 75px}
+.digital-editorial-sequence{display:flex;flex-direction:column;gap:clamp(65px,8vw,125px);margin:clamp(70px,8vw,130px) 0 75px}
 .digital-shot{min-width:0;margin:0}
 .digital-shot img{display:block;width:100%;height:auto;object-fit:contain}
 .digital-shot figcaption{font-size:10px;letter-spacing:.11em;padding-top:13px}
-.digital-shot-menu{grid-column:1/span 5;grid-row:1;width:100%;max-width:510px;justify-self:start}
-.digital-sequence-label{grid-column:8/span 4;grid-row:1;align-self:center;padding:0}
-.digital-sequence-label span{font-size:10px;letter-spacing:.12em}
-.digital-sequence-label p{font-size:clamp(16px,1.65vw,25px);line-height:1.4;margin-top:25px}
-.digital-shot-brasa{grid-column:1/-1;grid-row:2;width:100%}
-.digital-shot-history{grid-column:7/span 5;grid-row:3;width:100%;max-width:490px;justify-self:end}
-.digital-shot-contact{grid-column:1/span 10;grid-row:4;width:100%;margin-top:0}
+.digital-spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(35px,5vw,100px);align-items:center}
+.digital-spread-cuisine .digital-shot-menu{width:min(100%,510px);justify-self:start}
+.digital-spread-history .digital-shot-history{width:min(100%,490px);justify-self:center}
+.digital-spread-copy{max-width:530px}
+.digital-eyebrow{display:block;font-size:10px;letter-spacing:.14em;margin-bottom:clamp(22px,3vw,48px)}
+.digital-spread-copy h3{font-size:clamp(36px,4.3vw,80px);line-height:1.01;letter-spacing:-.065em;font-weight:700;margin:0 0 26px}
+.digital-spread-copy h3 em{font-style:normal;font-weight:400}
+.digital-spread-copy p{font-size:clamp(15px,1.4vw,21px);line-height:1.5;max-width:390px;margin:0}
+.digital-shot-brasa{width:100%}
+.digital-shot-contact{width:100%;max-width:1250px;align-self:center}
 .digital-social{border-top:1px solid #c6c3be}
 .digital-social-sign{background:#111;color:#eee7da;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,2vw,36px);transform:rotate(2deg)}
 .digital-social-sign span{font-size:clamp(9px,.9vw,13px);letter-spacing:.12em}
 .digital-social-sign strong{font-size:clamp(38px,4vw,90px);letter-spacing:-.065em;line-height:.91;font-weight:700}
 @media(max-width:700px){
-.digital-editorial-sequence{display:flex;flex-direction:column;align-items:stretch;gap:55px;margin:65px 0}
-.digital-shot-menu{width:min(90%,440px);max-width:440px;align-self:flex-start}
-.digital-sequence-label{width:85%;align-self:flex-end;padding:0}
-.digital-shot-brasa{width:100%}
-.digital-shot-history{width:min(90%,440px);max-width:440px;align-self:flex-end}
-.digital-shot-contact{width:100%;margin:0}
+.digital-editorial-sequence{gap:65px;margin:65px 0}
+.digital-spread{grid-template-columns:1fr;gap:32px}
+.digital-spread-cuisine .digital-shot-menu{width:min(90%,440px)}
+.digital-spread-cuisine .digital-spread-copy{width:90%;justify-self:end}
+.digital-spread-history .digital-spread-copy{grid-row:1}
+.digital-spread-history .digital-shot-history{grid-row:2;width:min(90%,440px);justify-self:end}
+.digital-spread-copy h3{font-size:clamp(35px,9vw,55px)}
+.digital-shot-contact{width:100%}
 .digital-social-sign{width:80%;align-self:flex-end}
 }
 </style>
@@ -202,10 +207,15 @@
 <p class="digital-note">Diseño web, estructura de contenidos y experiencia digital para trasladar la esencia del restaurante a la pantalla.</p>
 </div>
 <div class="digital-editorial-sequence">
+<section class="digital-spread digital-spread-cuisine">
 <figure class="digital-shot digital-shot-menu"><img src="images/europa-web-cocina.png" alt="Platos y carta de la web de Restaurante Europa" loading="lazy"><figcaption>02 / COCINA Y CARTA</figcaption></figure>
-<div class="digital-sequence-label"><span>DISEÑO EDITORIAL</span><p>Una experiencia digital que combina grandes titulares, fotografía y contrastes para contar la historia del restaurante.</p></div>
+<div class="digital-spread-copy"><span class="digital-eyebrow">DISEÑO EDITORIAL / 02</span><h3>La cocina,<br><em>sin artificios.</em></h3><p>Una carta que habla de recetas de siempre. La fotografía y la tipografía hacen que cada plato tenga su lugar.</p></div>
+</section>
 <figure class="digital-shot digital-shot-brasa"><img src="images/europa-web-brasa.png" alt="Sección La brasa de la web de Restaurante Europa" loading="lazy"><figcaption>03 / LA BRASA</figcaption></figure>
+<section class="digital-spread digital-spread-history">
+<div class="digital-spread-copy"><span class="digital-eyebrow">HISTORIA Y EXPERIENCIA / 04</span><h3>Más de medio siglo<br><em>alrededor de la mesa.</em></h3><p>La historia del restaurante, las voces de quienes vuelven y el entorno que forma parte de su identidad.</p></div>
 <figure class="digital-shot digital-shot-history"><img src="images/europa-web-historia-resenas-galeria.png" alt="Secciones de historia, reseñas y galería de la web" loading="lazy"><figcaption>04 / HISTORIA, RESEÑAS Y GALERÍA</figcaption></figure>
+</section>
 <figure class="digital-shot digital-shot-contact"><img src="images/europa-web-contacto.png" alt="Sección de reservas y contacto de la web" loading="lazy"><figcaption>05 / RESERVAS Y CONTACTO</figcaption></figure>
 </div>
 <div class="digital-social">
